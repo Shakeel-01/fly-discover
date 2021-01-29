@@ -120,3 +120,13 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+#confirm-area {
+    display: none;
+    margin-left: 40%;
+    margin-top: 20%;
+    color:rgba(143, 19, 19, 0.884);
+    font-size: 30px;
+    
+    
+}
+

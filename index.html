@@ -13,103 +13,111 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+<body >
+    
+    <div id="booking-area">
+        <!--Header and Menu Section-->
+        <header class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--Booking Section-->
+        <main  class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
                         <input class="inp-style" type="date" name="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <input id="ecoClass-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <p><button class="plus-minus-btn"><span onclick=" countTicketChange('ecoClass', true)">+</span>
+                            </button>
+                            <button class="plus-minus-btn"><span onclick="countTicketChange('ecoClass', false)">-</span></button>
+                        </p>
+                    </div>
                 </div>
+    
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <input id="firstClass-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <p><button class="plus-minus-btn"><span onclick=" countTicketChange('firstClass', true)">+</span>
+                            </button>
+                            <button class="plus-minus-btn"><span onclick="countTicketChange('firstClass', false)">-</span></button>
+                        </p>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="sub-total">500</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="tax">50</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="total">550</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="booking-btn" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="ecoClass-count" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <p><button class="plus-minus-btn"><span onclick=" countTicketChange('ecoClass', true)">+</span>
-                        </button>
-                        <button class="plus-minus-btn"><span onclick="countTicketChange('ecoClass', false)">-</span></button>
-                    </p>
-                </div>
+    
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                    veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                    voluptatibus quam</p>
             </div>
+    </div>
+    <div id="confirm-area">
+        <h1 class="confirm">Congratulations!!</h1>
+        <p class="confirm">your tickets are booked</p>
 
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="firstClass-count" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <p><button class="plus-minus-btn"><span onclick=" countTicketChange('firstClass', true)">+</span>
-                        </button>
-                        <button class="plus-minus-btn"><span onclick="countTicketChange('firstClass', false)">-</span></button>
-                    </p>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="sub-total">500</span></p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="tax">50</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="total">550</span></p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
-        </div>
-
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
-                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
-                voluptatibus quam</p>
-        </div>
+    </div>
         <script>
 
 
@@ -127,7 +135,7 @@
 
                 calculatePrice();
             }
-            
+
             function calculatePrice() {
                 const ecoClassInput = document.getElementById('ecoClass-count')
                 const ecoClassCount = parseInt(ecoClassInput.value);
@@ -145,6 +153,13 @@
                 document.getElementById('total').innerText = total;
 
             }
+
+            const bookingBtn = document.getElementById('booking-btn').addEventListener('click', function(){
+                const contentArea = document.getElementById('booking-area');
+                contentArea.style.display = "none";
+                const confirmArea = document.getElementById('confirm-area');
+                confirmArea.style.display = 'block'
+            })
 
         </script>
         </section>
